@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+dist
+.env
+*.log
+*.sqlite
+private.key
+coverage
+*.sh
