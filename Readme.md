@@ -20,30 +20,32 @@ Features include JWT authentication, Zod validation, Jest testing, ESLint, Prett
 
 ## Getting started
 
-Clone the repository and install dependencies:
+Clone the repository:
 
 ```
 git clone https://github.com/camilledtr/express-boilerplate.git
 cd express-boilerplate
+```
+
+Remove the .git folder (and any additional files, folders or dependencies you may not need)
+
+```
+rm -rf .git
+```
+
+Install dependencies:
+
+```
 pnpm install
 ```
 
-Update the remote git repository:
+Initialize git repository and add your remote repository:
 
 ```
-git remote set-url origin <your-new-git-repo>
-
-git remote -v
+git init
+git remote add origin <repository-url>
 ```
 
-Update the author of the future commits:
-
-```
-git config --global user.name "<gh-username>"
-git config --global user.email "<email>"
-
-git config --global --list
-```
 
 Update the package.json meta data:
 - name
@@ -57,7 +59,7 @@ Commit the changes:
 ```
 git add .
 git commit -m "Initial commit"
-git push
+git push -u origin main
 ```
 
 ##
