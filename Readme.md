@@ -57,6 +57,7 @@ Commit the changes:
 ```
 git add .
 git commit -m "Initial commit"
+git push
 ```
 
 ##
@@ -128,9 +129,9 @@ This will run the compiled JavaScript code located in the `dist` folder.
 ###
 #### Middlewares
 
-- [cors]() (handle Cross-Origin Resource Sharing)
+- [cors](https://www.npmjs.com/package/cors) (handle Cross-Origin Resource Sharing)
 - [cookie-parser](https://www.npmjs.com/package/cookie-parser) (parse cookies)
-- [multer]() (handle file uploads)
+- [multer](https://www.npmjs.com/package/multer) (handle file uploads)
 
 ###
 #### Testing
