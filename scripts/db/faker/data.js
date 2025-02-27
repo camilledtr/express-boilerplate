@@ -7,6 +7,10 @@ if (!process.env.DEV_EMAIL) {
   throw new Error("Missing DEV_EMAIL in .env")
 }
 
+if (!process.env.DEV_USERNAME) {
+  throw new Error("Missing DEV_USERNAME in .env")
+}
+
 if (!process.env.DEV_PASSWORD) {
   throw new Error("Missing DEV_PASSWORD in .env")
 }
@@ -38,6 +42,7 @@ const users = [
   {
     id: "id-dev-user",
     email: process.env.DEV_EMAIL,
+    username: process.env.DEV_USERNAME,
     firstName: process.env.DEV_FIRST_NAME,
     lastName: process.env.DEV_LAST_NAME,
     password: hashedDevPassword,

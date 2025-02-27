@@ -33,10 +33,10 @@ const seedDatabase = async (db, dbName) => {
   for (const user of users) {
     try {
       await runDbQuery(
-        `INSERT INTO user ('id', 'email', 'first_name', 'last_name', 'password')
-        VALUES (?, ?, ?, ?, ?)`,
+        `INSERT INTO user ('id', 'email', 'username', 'first_name', 'last_name', 'password')
+        VALUES (?, ?, ?, ?, ?, ?)`,
         db,
-        [user.id, user.email, user.firstName, user.lastName, user.password]
+        [user.id, user.email, user.username, user.firstName, user.lastName, user.password]
       )
     } catch (error) {
       console.error(`Error during the insertion of the ${user.id} user:`, error)
