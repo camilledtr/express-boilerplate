@@ -2,6 +2,8 @@ import { Request, Response, NextFunction } from "express"
 import * as fs from "fs"
 import * as path from "path"
 
+import { getCurrentDir } from "../utils/path"
+
 export function requestLoggerMiddleware(
   req: Request,
   res: Response,
@@ -12,7 +14,7 @@ export function requestLoggerMiddleware(
     : req.ip
 
   const logMessage = `${new Date().toLocaleString("fr-FR", { timeZoneName: "short" })}, ${req.method}, ${req.originalUrl}, IP: ${ip}\n`
-  const logFilePath = path.join(__dirname, "../../routing.log")
+  const logFilePath = path.join(getCurrentDir(), "../../routing.log")
 
   fs.appendFile(logFilePath, logMessage, (err) => {
     if (err) {
