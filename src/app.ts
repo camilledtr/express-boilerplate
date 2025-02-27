@@ -9,6 +9,7 @@ import { NotFoundError } from "./types/error"
 import { initializeDb } from "./config/db"
 import { DB_PATH, DB_TEST_PATH } from "./constants/db"
 import { isTest } from "./constants/env"
+import authRoutes from "./routes/auth"
 
 dotenv.config()
 
@@ -35,6 +36,7 @@ app.use(requestLoggerMiddleware)
 app.get("/", (req, res) => {
   res.send("Server is running")
 })
+authRoutes(app, db)
 
 app.use((req, res, next) => {
   next(new NotFoundError("Resource not found", "NOT_FOUND"))

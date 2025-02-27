@@ -1,7 +1,9 @@
 import { isProduction } from "./env"
 
-export const CLIENT_USER_COOKIE_KEY = process.env.CLIENT_USER_COOKIE_KEY || "user"
-export const CLIENT_TOKEN_COOKIE_KEY = process.env.CLIENT_TOKEN_COOKIE_KEY || "token"
+export const CLIENT_USER_COOKIE_KEY =
+  process.env.CLIENT_USER_COOKIE_KEY || "user"
+export const CLIENT_TOKEN_COOKIE_KEY =
+  process.env.CLIENT_TOKEN_COOKIE_KEY || "token"
 
 export const CLIENT_COOKIES = [CLIENT_USER_COOKIE_KEY, CLIENT_TOKEN_COOKIE_KEY]
 

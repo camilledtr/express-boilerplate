@@ -7,7 +7,9 @@ import { isTest } from "../constants/env"
 export const initializeDb = (dbPath: string): Database => {
   if (!fs.existsSync(dbPath)) {
     console.error("\nError: Database file not found at", path.resolve(dbPath))
-    console.error("Make sure the database file exists before running the server.")
+    console.error(
+      "Make sure the database file exists before running the server."
+    )
     process.exit(1)
   }
 
