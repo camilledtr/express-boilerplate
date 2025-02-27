@@ -88,6 +88,12 @@ Update the following files to set up the db:
 - Fake data: `scripts/db/faker/data.js`
 - Seed the db with fake data: `scripts/db/seed.js`
 
+Run the script to initialize the database:
+
+```
+pnpm db
+```
+
 
 ##
 After having installed dependencies, set your environment variables and private key and created a SQLite database, run the development server:
